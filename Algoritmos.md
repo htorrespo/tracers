@@ -74,3 +74,13 @@ def solver(I, a, T, dt, theta):
         u[n+1] = (1 - (1-theta)*a*dt)/(1 + theta*dt*a)*u[n]
     return u, t
 ```
+
+
+The numpy library contains a lot of functions for array computing. Most of the function names are similar to what is found in the alternative scientific computing language MATLAB. Here we make use of
+
+- zeros(Nt+1) for creating an array of size Nt+1 and initializing the elements to zero
+
+- linspace(0, T, Nt+1) for creating an array with Nt+1 coordinates uniformly distributed between 0 and T
+
+The for loop deserves a comment, especially for newcomers to Python. The construction range(0, Nt, s) generates all integers from 0 to Nt in steps of s, but not including Nt. Omitting s means s=1. For example, range(0, 6, 3) gives 0 and 3, while range(0, 6) generates the list [0, 1, 2, 3, 4, 5]. Our loop implies the following assignments to u[n+1]: u[1], u[2], …, u[Nt], which is what we want since u has length Nt+1. The first index in Python arrays or lists is always 0 and the last is then len(u)-1 (the length of an array u is obtained by len(u) or u.size).
+
