@@ -3,6 +3,10 @@ Finite Difference Computing with Exponential Decay Models
 Authors (view affiliations) 
 Hans Petter Langtangen
 https://link.springer.com/book/10.1007/978-3-319-29439-1#toc
+
+
+https://github.com/ThomIves/SystemOfEquations
+
 -->
 # Exponential Decay Models
 
